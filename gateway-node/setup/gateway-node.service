@@ -1,0 +1,14 @@
+[Unit]
+Description=Gateway Node
+After=network.target
+
+[Service]
+ExecStart=python /home/pi/code/gateway-node.py
+WorkingDirectory=/home/pi/code
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
